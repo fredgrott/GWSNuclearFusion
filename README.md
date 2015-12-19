@@ -1,7 +1,7 @@
 GWSNuclearFusion
 ================
 
-A different MVP-Binding library, one without the M and with the VM for a VVMP style feel.
+Just a straight MVP with Google's DataBinding Engine.
 
 Usage
 =====
@@ -30,6 +30,8 @@ Api 16 to api 23.
 
 Credits
 ========
+
+[Stuff in State package from Alex Vasilkov's AndroidCommons project]()
 
 Fred Grott(aka shareme  GrottWorkShop)
 [MyGithubProfile](https://github.com/shareme/MyGithubProfile)

@@ -85,6 +85,8 @@ dependencies {
     }
     compile rootProject.ext.appDependencies.timber
     compile rootProject.ext.databindingDependencies.databindingLibrary
+    compile 'com.google.code.gson:gson:2.3.1'
+
 
 }
 install {
