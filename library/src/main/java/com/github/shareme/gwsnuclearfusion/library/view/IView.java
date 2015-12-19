@@ -11,15 +11,12 @@
  * distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and limitations under License.
  */
-package com.github.shareme.gwsnuclearfusion.library.viewmodel;
+package com.github.shareme.gwsnuclearfusion.library.view;
 
 /**
- * IViewModelProvider
+ * IView interface
  * Created by fgrott on 12/19/2015.
  */
 @SuppressWarnings("unused")
-public interface IViewModelProvider {
-
-    ViewModelProvider getViewModelProvider();
-
+public interface IView {
 }
