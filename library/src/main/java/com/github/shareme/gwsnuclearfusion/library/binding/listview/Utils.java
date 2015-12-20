@@ -33,14 +33,14 @@ import java.lang.reflect.Method;
  * Created by fgrott on 12/19/2015.
  */
 @SuppressWarnings("unused")
-class Utils {
+public class Utils {
     private static final String TAG = "BCAdapters";
 
     /**
      * Helper to throw an exception when {@link android.databinding.ViewDataBinding#setVariable(int,
      * Object)} returns false.
      */
-    static void throwMissingVariable(ViewDataBinding binding, int bindingVariable, @LayoutRes int layoutRes) {
+    public static void throwMissingVariable(ViewDataBinding binding, int bindingVariable, @LayoutRes int layoutRes) {
         Context context = binding.getRoot().getContext();
         Resources resources = context.getResources();
         String layoutName = resources.getResourceName(layoutRes);
@@ -109,7 +109,7 @@ class Utils {
      * Ensures the call was made on the main thread. This is enforced for all ObservableList change
      * operations.
      */
-    static void ensureChangeOnMainThread() {
+    public static void ensureChangeOnMainThread() {
         if (Thread.currentThread() != Looper.getMainLooper().getThread()) {
             throw new IllegalStateException("You must only modify the ObservableList on the main thread.");
         }
@@ -119,7 +119,7 @@ class Utils {
      * Constructs a binding adapter class from it's class name using reflection.
      */
     @SuppressWarnings("unchecked")
-    static <T, A extends BindingCollectionAdapter<T>> A createClass(String className, ItemViewArg<T> arg) {
+    public static <T, A extends BindingCollectionAdapter<T>> A createClass(String className, ItemViewArg<T> arg) {
         try {
             return (A) Class.forName(className).getConstructor(ItemViewArg.class).newInstance(arg);
         } catch (Exception e) {
